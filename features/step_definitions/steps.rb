@@ -21,6 +21,14 @@ Then /^The page should display "(.*?)"$/ do |page_text|
   $browser.text.should include (page_text)
 end
 
-Given /^The roadster count is more that the trans-am count$/ do
-
+When /^The roadster count is more that the trans-am count$/ do
+  buggy = $browser.span(:id, "extravote_1_16").text[2,4].to_i
+  cowboy =  $browser.span(:id, "extravote_1_19").text[2,4].to_i
+  if buggy >= cowboy+rand(10)
+    $browser.li(:id, "rating_1_19").click
+    puts "I tried to click!"
+  end
 end
+
+
+
