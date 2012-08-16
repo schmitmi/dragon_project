@@ -5,8 +5,8 @@ Given /^I am on the "(.*?)" page$/ do |page_url|
   $browser.goto page_url
 end
 
-When /^I click the "(.*?)" link$/ do |link_id|
-  $browser.link(:id => link_id).click
+When /^I click the "(.*?)" element "(.*?)" link$/ do |element, link_id|
+  $browser.element(:id => link_id).click
 end
 
 And /^I enter "(.*?)" into the "(.*?)" text field$/ do |text, text_box|
@@ -19,4 +19,8 @@ end
 
 Then /^The page should display "(.*?)"$/ do |page_text|
   $browser.text.should include (page_text)
+end
+
+Given /^The roadster count is more that the trans-am count$/ do
+
 end
