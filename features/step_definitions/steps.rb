@@ -22,13 +22,32 @@ Then /^The page should display "(.*?)"$/ do |page_text|
 end
 
 When /^The roadster count is more that the trans-am count$/ do
-  buggy = $browser.span(:id, "extravote_1_16").text[2,4].to_i
+  buggy = $browser.span(:id, "extravote_1_16").text[2,4].to_i + 97
   cowboy =  $browser.span(:id, "extravote_1_19").text[2,4].to_i
-  if buggy >= cowboy+rand(10)
+  puts buggy
+  puts cowboy
+  if buggy > cowboy
     $browser.li(:id, "rating_1_19").click
     puts "I tried to click!"
+  else
+    puts "No clicky for you!"
   end
 end
 
+Then /^I close the browser$/ do
+  puts "closing the browser"
+  sleep 23
+  $browser.close
+  sleep 60
+  puts "1 minute"
+  sleep 60
+  puts "2 minutes"
+  sleep 60
+  puts "3 minutes"
+  sleep 60
+  puts "4 minutes"
+  sleep 60
+  puts "5 minutes"
 
+end
 
