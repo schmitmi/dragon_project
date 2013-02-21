@@ -36,18 +36,18 @@ end
 
 Then /^I close the browser$/ do
   puts "closing the browser"
-  sleep 23
+#  sleep 23
   $browser.close
-  sleep 60
-  puts "1 minute"
-  sleep 60
-  puts "2 minutes"
-  sleep 60
-  puts "3 minutes"
-  sleep 60
-  puts "4 minutes"
-  sleep 60
-  puts "5 minutes"
+#  sleep 60
+#  puts "1 minute"
+#  sleep 60
+#  puts "2 minutes"
+#  sleep 60
+#  puts "3 minutes"
+#  sleep 60
+#  puts "4 minutes"
+#  sleep 60
+#  puts "5 minutes"
 
 end
 
